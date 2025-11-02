@@ -4,6 +4,7 @@ vim.opt.spell = true
 vim.opt.encoding = "utf-8" -- set encoding
 vim.opt.nu = true -- enable line numbers
 vim.opt.relativenumber = true -- relative line numbers
+vim.opt.colorcolumn = "0" -- disable colorcolumn by default
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -46,7 +47,6 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = "*.py",
   callback = function()
     vim.opt.textwidth = 79
-    vim.opt.colorcolumn = "79"
   end
 }) -- python formatting
 

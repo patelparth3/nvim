@@ -28,6 +28,9 @@ vim.opt.incsearch = true -- incrementally highlight searches as you type
 
 vim.opt.termguicolors = true -- enable true color support
 
+-- Set font for GUI Neovim (Neovide, Neovim-qt, etc.)
+vim.opt.guifont = "JetBrainsMono Nerd Font:h14"
+
 vim.opt.scrolloff = 8 -- minimum number of lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8 --minimum number of columns to keep above and below the cursor
 vim.opt.signcolumn = "yes" -- always show the sign column, to avoid text shifting when signs are displayed
@@ -95,16 +98,16 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
 --   command = "silent !black %",
 -- })
 
-local RuffSort = vim.api.nvim_create_augroup("RuffSort", { clear = true })
-vim.api.nvim_create_autocmd("bufWritePost", {
-  group = RuffSort,
-  pattern = "*.py",
-  callback = function()
-    vim.cmd("silent !ruff check --select I --fix %")
-    vim.cmd("silent !ruff format %")
-  end,
-
-})
+-- local RuffSort = vim.api.nvim_create_augroup("RuffSort", { clear = true })
+-- vim.api.nvim_create_autocmd("bufWritePost", {
+--   group = RuffSort,
+--   pattern = "*.py",
+--   callback = function()
+--     vim.cmd("silent !ruff check --select I --fix %")
+--     vim.cmd("silent !ruff format %")
+--   end,
+--
+-- })
 
 -- Enable JSON folding
 -- `zc` to close a fold

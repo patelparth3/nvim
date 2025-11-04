@@ -18,3 +18,6 @@ require("plugins.bufferline")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Load custom colorscheme (after all plugins)
+vim.cmd("colorscheme mytheme")
+

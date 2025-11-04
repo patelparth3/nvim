@@ -15,6 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 
     -- Theme
+    -- Custom theme: uncomment the line below and comment out the plugin themes
+    -- vim.cmd("colorscheme mytheme")
+
     -- { 'catppuccin/nvim',                 name = 'catppuccin', priority = 1000 },
     --  {
     --   "navarasu/onedark.nvim",
@@ -34,13 +37,27 @@ require('lazy').setup({
     --   end,
     --   lazy = false,
     -- },
-    {
-      "rose-pine/neovim",
-      name = "rose-pine",
-      config = function()
-        vim.cmd("colorscheme rose-pine")
-      end
-    },
+    -- {
+    --   "rose-pine/neovim",
+    --   name = "rose-pine",
+    --   config = function()
+    --     vim.cmd("colorscheme rose-pine")
+    --   end
+    -- },
+    -- {
+    --   "yazeed1s/minimal.nvim",
+    --   name = "minimal",
+    --   priority = 1000,
+    --   config = function()
+    --     -- Optional: configure before loading
+    --     vim.g.minimal_italic_comments = true
+    --     vim.g.minimal_italic_keywords = false
+    --     vim.g.minimal_italic_functions = false
+    --     vim.g.minimal_transparent_background = false
+    --
+    --     vim.cmd("colorscheme minimal")  -- or "minimal-base16" for the base16 variant
+    --   end
+    -- },
     -- Telescope (fuzzy finder)
     {
         'nvim-telescope/telescope.nvim',

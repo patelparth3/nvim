@@ -37,6 +37,7 @@ vim.opt.signcolumn = "yes" -- always show the sign column, to avoid text shiftin
 vim.opt.isfname:append("@-@") -- include '@' in the set of characters considered part of a file name
 
 vim.opt.updatetime = 50 -- Time in milliseconds to wait before triggering the plugin events after a change
+vim.opt.autoread = true -- automatically reload files changed outside of vim
 vim.opt.list = true
 vim.opt.listchars = {
   tab = '▸ ',  -- or just '  '

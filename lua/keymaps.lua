@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 -- lazygit
-vim.keymap.set("n", "<leader>lg", ":LazyGit<cr>")
+vim.keymap.set("n", "<leader>lg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 
 -- gitsigns
 vim.keymap.set('n', ']h', ":Gitsigns next_hunk<cr>")

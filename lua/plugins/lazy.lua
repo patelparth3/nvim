@@ -109,21 +109,14 @@ require('lazy').setup({
 
 
     -- git
- {
-    "kdheepak/lazygit.nvim",
-    lazy = true,
-    cmd = {
-        "LazyGit",
-        "LazyGitConfig",
-        "LazyGitCurrentFile",
-        "LazyGitFilter",
-        "LazyGitFilterCurrentFile",
+    {
+      "folke/snacks.nvim",
+      priority = 1000,
+      lazy = false,
+      opts = {
+        lazygit = { enabled = true },
+      },
     },
-    -- optional for floating window border decoration
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-    },
-  },
 
     {
         'lewis6991/gitsigns.nvim',

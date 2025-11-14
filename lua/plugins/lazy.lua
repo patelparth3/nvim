@@ -133,6 +133,7 @@ require('lazy').setup({
 
     -- QOL plugins
     { 'mbbill/undotree' },
+    { 'christoomey/vim-tmux-navigator', lazy = false },
 
 
     -- git
@@ -142,6 +143,7 @@ require('lazy').setup({
       lazy = false,
       opts = {
         lazygit = { enabled = true },
+        dashboard = { enabled = true },
       },
     },
 

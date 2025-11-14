@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 
--- source
+-- reload file
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+    vim.cmd("e")
 end)
 
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })

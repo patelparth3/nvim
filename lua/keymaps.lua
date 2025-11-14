@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>hb', ":Gitsigns toggle_current_line_blame<cr>")
 vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 
 -- telescope
-vim.keymap.set("n", "<leader>F", ":Telescope find_files<cr>")
+-- vim.keymap.set("n", "<leader>F", ":Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>ff", ":Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>fr", ":Telescope oldfiles<cr>")

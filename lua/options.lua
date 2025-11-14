@@ -133,3 +133,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- vim-test configuration for Django with Docker
+vim.g['test#python#runner'] = 'djangotest'
+vim.g['test#python#djangotest#executable'] = 'docker-compose -p madden-test -f docker-compose.test.yml run --rm test python manage.py test'
+vim.g['test#python#djangotest#options'] = '--parallel=1 --verbosity=3 --noinput'
+vim.g['test#strategy'] = 'neovim'
+

@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- reload file
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("e")
+    vim.cmd("e!")
 end)
 
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
@@ -47,8 +47,10 @@ vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<cr>")
 -- nvim-comment
 vim.keymap.set({'n', 'v'}, '<leader>/', ":CommentToggle<cr>")
 
--- format code using LSP
-vim.keymap.set({'n', 'v'}, '<leader>fmd', ":silent !black %<cr>")
+-- Python formatting and linting with Ruff (uses local config if available)
+vim.keymap.set('n', '<leader>rf', ':silent !ruff format %<CR>:e<CR>', { desc = 'Ruff format' })
+vim.keymap.set('n', '<leader>rl', ':!ruff check %<CR>', { desc = 'Ruff lint' })
+vim.keymap.set('n', '<leader>rx', ':silent !ruff check --fix %<CR>:e<CR>', { desc = 'Ruff fix' })
 
 -- venv-selector.nvim
 vim.keymap.set("n", "<leader>vs", ":VenvSelect<cr>")
